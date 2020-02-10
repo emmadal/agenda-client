@@ -10,7 +10,7 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 
 const client = new ApolloClient({
-  uri: "/.netlify/functions/graphql"
+  uri: "https://agendaserver.herokuapp.com/graphql"
 });
 
 ReactDOM.render(
