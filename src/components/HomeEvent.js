@@ -12,16 +12,14 @@ export default function HomeEvent() {
         <MDBCol sm="12" className="mt-2">
           <h1 className="h1-responsive text-center font-weight-bold">
             {" "}
-            AGENDA COMMUNITY
+            EventApp
           </h1>
           <hr className="hr-light" />
         </MDBCol>
       </MDBRow>
 
       <MDBRow className="my-3">
-        <MDBBtn
-          onClick={() => setModal(!modal)}
-        >
+        <MDBBtn onClick={() => setModal(!modal)}>
           Ajouter un evenement <i className="fa fa-plus"></i>
         </MDBBtn>
         <EventInput state={modal} start={toogle} />
@@ -31,12 +29,12 @@ export default function HomeEvent() {
         <MDBCol sm="12" className="my-3">
           <h3 className="h3-responsive text-center font-weight-bold">
             {" "}
-            LISTE DES EVENEMENTS PAR CATEGORIES
+            LISTE DES EVENEMENTS PAR CATEGORIE
           </h3>
           <hr className="hr-light" />
         </MDBCol>
       </MDBRow>
-      <EventPills/>
+      <EventPills />
     </MDBContainer>
   );
 }

@@ -34,7 +34,7 @@ const EVENT_SPORT_QUERY = gql `
 
 const EVENT_POLITIC_QUERY = gql `
   {
-    eventPolitic {
+    eventPolitics {
       id
       title
       place
