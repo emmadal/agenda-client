@@ -58,7 +58,7 @@ export default function Politics(props) {
     <MDBContainer>
       <MDBRow>
         <MDBCol sm="12" className="card-col">
-          {data.eventPolitic.map(m => (
+          {data.eventPolitics.map(m => (
             <div className="items-card m-2" key={m.id}>
               <MDBRow>
                 <MDBCol sm="4" className="items-img">
