@@ -1,14 +1,18 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter,Switch, Route  } from "react-router-dom";
 import HomeEvent from "./components/HomeEvent";
+import Login from "./components/Login";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App-header">
-        <HomeEvent />
-      </div>
+    <BrowserRouter >
+      <Switch>
+        <Route path="/" component={Login} exact/>
+        <div className="App-header">
+          <Route path="/event" component={HomeEvent} exact/>
+        </div>
+      </Switch>
     </BrowserRouter>
   );
 }

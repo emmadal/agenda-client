@@ -1,6 +1,7 @@
 input[type=text]:focus,
 input[type=time]:focus,
-input[type=date]:focus {
+input[type=date]:focus,
+input[type=password]:focus {
   box-shadow: 14px 14px 14px #18191a;
   border: 2px solid #57606f;
   background: #57606f;
