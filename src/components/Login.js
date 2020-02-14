@@ -3,6 +3,7 @@ import '../styles/login.css'
 import { Container, Row, Col, Input, Form, Button} from 'reactstrap'
 import { toast, ToastContainer } from 'react-toastify';
 import { ClipLoader } from 'react-spinners'
+import HomeEvent from './HomeEvent'
 import 'react-toastify/dist/ReactToastify.min.css'
 import firebase from '../config'
 
@@ -11,12 +12,12 @@ export default function Login() {
     const [user, setUser] = useState(null)
     const [loading, setLoading]  = useState(false)
 
-    useEffect(() => {
-        verifyIdentity()
-    }, [])
+    useEffect(() => verifyIdentity(), [])
 
     const verifyIdentity = () => {
-        
+        firebase.auth().onAuthStateChanged((currentUser) => {
+            if(currentUser) setUser(currentUser)
+        })
     }
 
     const notifyFailed = () => {
@@ -28,9 +29,8 @@ export default function Login() {
             pauseOnHover: true,
             draggable: true
         });
+        setCredential({email:'', password:''})
     };
-
-
 
     const handleChange = (e) => {
         setCredential({ ...credential, [e.target.name]: [e.target.value]})
@@ -42,6 +42,7 @@ export default function Login() {
         firebase.auth().signInWithEmailAndPassword(credential.email.toString().trim(), credential.password.toString().trim())
         .then((success) => {
             if(success) setLoading(false)
+            setCredential({ email: '', password: '' })
         }).catch((e) =>{
             if(e){
                 setLoading(false)
@@ -49,6 +50,23 @@ export default function Login() {
             }
         })
     }
+
+    const logout = () => {
+        firebase.auth().signOut()
+        .then(() => {
+            console.log('Déconnexion effectuée avec succès')
+            window.location = window.location.origin
+        }).catch(() => console.log('Veuillez vérifier vos paramètres réseau'))
+    }
+
+    if(user){
+        return(
+            <div className="App-header">
+                <HomeEvent logout={logout} email={user.email}/>
+            </div>
+        )
+    }
+   
     return(
         <div  className="login-header">
             <Container>

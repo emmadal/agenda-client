@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter,Switch, Route  } from "react-router-dom";
-import HomeEvent from "./components/HomeEvent";
 import Login from "./components/Login";
 
 function App() {
@@ -9,9 +8,9 @@ function App() {
     <BrowserRouter >
       <Switch>
         <Route path="/" component={Login} exact/>
-        <div className="App-header">
+        {/* <div className="App-header">
           <Route path="/event" component={HomeEvent} exact/>
-        </div>
+        </div> */}
       </Switch>
     </BrowserRouter>
   );

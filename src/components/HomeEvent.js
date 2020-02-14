@@ -1,22 +1,29 @@
 import React, { useState } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn} from "mdbreact";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import EventPills from './EventPills'
 import EventInput from './EventInput'
 
-export default function HomeEvent() {
+export default function HomeEvent(props) {
     const [modal, setModal] = useState(false)
     const toogle = () => setModal(!modal);
   return (
     <MDBContainer>
       <MDBRow>
-        <MDBCol sm="12" className="mt-2">
-          <h1 className="h1-responsive text-center font-weight-bold">
+        <MDBCol sm="10" className="mt-2">
+          <h1 className="h1-responsive text-center center font-weight-bold">
             {" "}
             EventApp
           </h1>
-          <hr className="hr-light" />
+        </MDBCol>
+        <MDBCol sm="2" className="mt-3">
+          <MDBBtn size="sm" rounded gradient="blue" title="Se deconnecter" onClick={() => props.logout()}>
+            <FontAwesomeIcon icon={faPowerOff} />
+          </MDBBtn>
         </MDBCol>
       </MDBRow>
+      <hr className="hr-light" />
 
       <MDBRow className="my-3">
         <MDBBtn onClick={() => setModal(!modal)}>
