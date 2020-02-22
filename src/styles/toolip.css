@@ -1,0 +1,13 @@
+.card {
+    font-size: 12px;
+    color: #000000;
+    width: 2180%;
+    padding: 5px;
+}
+
+.card>.header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 14px;
+    text-align: center;
+}

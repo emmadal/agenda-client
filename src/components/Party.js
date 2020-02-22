@@ -6,6 +6,7 @@ import { EVENT_PARTY_QUERY } from "../api/query";
 import { DEL_PARTY_EVENT } from "../api/mutation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ModalImage from "react-modal-image";
+import Toolip from './Toolip'
 import colors from "../container";
 import {
   faUndoAlt,
