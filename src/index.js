@@ -9,8 +9,11 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 
+// const client = new ApolloClient({
+//   uri: "https://agendaserver.herokuapp.com/graphql"
+// });
 const client = new ApolloClient({
-  uri: "https://agendaserver.herokuapp.com/graphql"
+  uri: "http://localhost:4000"
 });
 
 ReactDOM.render(

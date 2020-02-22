@@ -48,6 +48,8 @@ export default function EventInput(props) {
     place: "",
     date: "",
     categories: "",
+    description: "",
+    infoline: "",
     cover: ""
   });
   const [formfiles, setFormFiles] = useState({
@@ -84,6 +86,8 @@ export default function EventInput(props) {
             place: form.place.toString().trim(),
             date: form.date.toString().trim(),
             categories: form.categories.toString().trim(),
+            description: form.description.toString().trim(),
+            infoline: form.infoline.toString().trim(),
             cover: {
               filename: formfiles.imagePreviewUrl,
               mimetype: formfiles.imageMimeType,
@@ -100,6 +104,8 @@ export default function EventInput(props) {
             hour: form.hour.toString().trim(),
             place: form.place.toString().trim(),
             date: form.date.toString().trim(),
+            description: form.description.toString().trim(),
+            infoline: form.infoline.toString().trim(),
             categories: form.categories.toString().trim(),
             cover: {
               filename: formfiles.imagePreviewUrl,
@@ -118,6 +124,8 @@ export default function EventInput(props) {
             place: form.place.toString().trim(),
             date: form.date.toString().trim(),
             categories: form.categories.toString().trim(),
+            description: form.description.toString().trim(),
+            infoline: form.infoline.toString().trim(),
             cover: {
               filename: formfiles.imagePreviewUrl,
               mimetype: formfiles.imageMimeType,
@@ -135,6 +143,8 @@ export default function EventInput(props) {
             place: form.place.toString().trim(),
             date: form.date.toString().trim(),
             categories: form.categories.toString().trim(),
+            description: form.description.toString().trim(),
+            infoline: form.infoline.toString().trim(),
             cover: {
               filename: formfiles.imagePreviewUrl,
               mimetype: formfiles.imageMimeType,
@@ -152,6 +162,8 @@ export default function EventInput(props) {
             place: form.place.toString().trim(),
             date: form.date.toString().trim(),
             categories: form.categories.toString().trim(),
+            description: form.description.toString().trim(),
+            infoline: form.infoline.toString().trim(),
             cover: {
               filename: formfiles.imagePreviewUrl,
               mimetype: formfiles.imageMimeType,
@@ -169,6 +181,8 @@ export default function EventInput(props) {
             place: form.place.toString().trim(),
             date: form.date.toString().trim(),
             categories: form.categories.toString().trim(),
+            description: form.description.toString().trim(),
+            infoline: form.infoline.toString().trim(),
             cover: {
               filename: formfiles.imagePreviewUrl,
               mimetype: formfiles.imageMimeType,
@@ -185,7 +199,9 @@ export default function EventInput(props) {
       hour: "",
       place: "",
       date: "",
-      categories: ""
+      categories: "",
+      description: "",
+      infoline: ""
     });
   };
 
@@ -258,7 +274,7 @@ export default function EventInput(props) {
           </Row>
 
           <Row form>
-            <Col sm={7}>
+            <Col sm={4}>
               <FormGroup>
                 <Label>Image publicitaire</Label>
                 <Input
@@ -286,6 +302,34 @@ export default function EventInput(props) {
                 </Input>
               </FormGroup>
             </Col>
+            <Col sm={4}>
+              <FormGroup>
+                <Label>Contact</Label>
+                <Input
+                  title="Infoline"
+                  type="text"
+                  value={form.infoline}
+                  name="infoline"
+                  onChange={handleInput}
+                  required
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col sm="12">
+              <FormGroup>
+                <Label>Description</Label>
+                <Input
+                  title="Description"
+                  type="textarea"
+                  value={form.description}
+                  name="description"
+                  onChange={handleInput}
+                  required />
+              </FormGroup>
+            </Col>
           </Row>
 
           <div className="btn-form">
@@ -295,7 +339,7 @@ export default function EventInput(props) {
                   form.place &&
                   form.date &&
                   form.title &&
-                  form.hour && formfiles.imagePreviewUrl) === ""
+                  form.hour && form.description && form.infoline && formfiles.imagePreviewUrl) === ""
                   ? true
                   : false
               }

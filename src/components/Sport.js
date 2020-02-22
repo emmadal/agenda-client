@@ -101,6 +101,9 @@ export default function Sport(props) {
                       Heure: <i>{m.hour}</i>
                     </span>
                   </section>
+                  <span className="">
+                    Infoline: <i>{m.infoline}</i>
+                  </span>
                 </MDBCol>
               </MDBRow>
               <div

@@ -100,6 +100,9 @@ export default function Party(props) {
                     <span className="">
                       Heure: <i>{m.hour}</i>
                     </span>
+                    <span className="">
+                      Infoline: <i>{m.infoline}</i>
+                    </span>
                   </section>
                 </MDBCol>
               </MDBRow>

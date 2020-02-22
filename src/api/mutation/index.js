@@ -9,6 +9,8 @@ export const ADD_RELIGIOUS_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -26,6 +28,8 @@ export const ADD_SPORT_EVENT = gql `
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -43,6 +47,8 @@ export const ADD_POLITIC_EVENT = gql `
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -60,6 +66,8 @@ export const ADD_SOCIETY_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -77,6 +85,8 @@ export const ADD_ENTERPRISE_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -94,6 +104,8 @@ export const ADD_PARTY_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -112,6 +124,8 @@ export const DEL_RELIGIOUS_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -129,6 +143,8 @@ export const DEL_POLITIC_EVENT = gql `
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -146,6 +162,8 @@ export const DEL_SPORT_EVENT = gql `
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -163,6 +181,8 @@ export const DEL_SOCIETY_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -180,6 +200,8 @@ export const DEL_ENTERPRISE_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -197,6 +219,8 @@ export const DEL_PARTY_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -216,6 +240,8 @@ export const UP_RELIGIOUS_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -233,6 +259,8 @@ export const UP_SPORT_EVENT = gql `
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -250,6 +278,8 @@ export const UP_POLITIC_EVENT = gql `
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -267,6 +297,8 @@ export const UP_SOCIETY_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -284,6 +316,8 @@ export const UP_ENTERPRISE_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype
@@ -301,6 +335,8 @@ export const UP_PARTY_EVENT = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
         mimetype

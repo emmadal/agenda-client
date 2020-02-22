@@ -117,6 +117,9 @@ export default function Religious(props) {
                       Heure: <i>{m.hour}</i>
                     </span>
                   </section>
+                  <span className="">
+                    Infoline: <i>{m.infoline}</i>
+                  </span>
                 </MDBCol>
               </MDBRow>
               <div

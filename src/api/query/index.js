@@ -9,6 +9,8 @@ const EVENT_RELIGIOUS_QUERY = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
       }
@@ -25,6 +27,8 @@ const EVENT_SPORT_QUERY = gql `
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
       }
@@ -41,6 +45,8 @@ const EVENT_POLITIC_QUERY = gql `
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
       }
@@ -57,6 +63,8 @@ const EVENT_SOCIETY_QUERY = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
       }
@@ -73,6 +81,8 @@ const EVENT_ENTERPRISE_QUERY = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
       }
@@ -88,6 +98,8 @@ const EVENT_PARTY_QUERY = gql`
       hour
       date
       categories
+      infoline
+      description
       cover {
         filename
       }
